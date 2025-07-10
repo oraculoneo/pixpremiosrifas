@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rifa Luxuosa - Estrelas Animadas</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      background: url('SEU_CAMINHO/SEU_BACKGROUND.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: moveStar 20s linear infinite, twinkle 2s infinite alternate;
+    }
+
+    @keyframes moveStar {
+      from {
+        transform: translateY(0) translateX(0);
+      }
+      to {
+        transform: translateY(-200vh) translateX(50vw);
+      }
+    }
+
+    @keyframes twinkle {
+      from { opacity: 0.2; }
+      to { opacity: 1; }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: gold;
+      text-align: center;
+      text-shadow: 2px 2px 8px black;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    .btn {
+      background: gold;
+      border: none;
+      color: black;
+      padding: 15px 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #ffd700;
+    }
+  </style>
+</head>
+<body>
+  <!-- Múltiplas estrelas -->
+  <div class="star" style="top: 90%; left: 10%; animation-delay: 0s;"></div>
+  <div class="star" style="top: 80%; left: 20%; animation-delay: 2s;"></div>
+  <div class="star" style="top: 95%; left: 40%; animation-delay: 4s;"></div>
+  <div class="star" style="top: 85%; left: 60%; animation-delay: 6s;"></div>
+  <div class="star" style="top: 92%; left: 80%; animation-delay: 8s;"></div>
+  <div class="star" style="top: 88%; left: 30%; animation-delay: 1s;"></div>
+  <div class="star" style="top: 93%; left: 50%; animation-delay: 3s;"></div>
+  <div class="star" style="top: 97%; left: 70%; animation-delay: 5s;"></div>
+  <div class="star" style="top: 89%; left: 90%; animation-delay: 7s;"></div>
+
+  <div class="container">
+    <h1>Bem-vindo à Minha Rifa Luxuosa</h1>
+    <p>Participe e concorra a prêmios incríveis!</p>
+    <button class="btn">Comprar Rifa</button>
+  </div>
+</body>
+</html>
